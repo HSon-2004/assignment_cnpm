@@ -1,0 +1,40 @@
+/* ============================= */
+/* 🌎 BỐ CỤC CHUNG */
+/* ============================= */
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column; /* Chia trang thành các phần: Header - Main - Footer */
+}
+
+/* Phần nội dung chính mở rộng để đẩy footer xuống */
+.main-content {
+    flex: 1; /* Giúp nội dung mở rộng đầy đủ */
+    padding: 20px;
+}
+
+/* ============================= */
+/* 📌 THIẾT KẾ FOOTER */
+/* ============================= */
+.footer {
+    background-color: #0091EA; /* Màu xanh nước biển */
+    color: white;
+    text-align: center;
+    padding: 20px 0; /* Tăng padding để footer lớn hơn */
+    font-size: 18px; /* Tăng kích thước chữ */
+    font-weight: bold;
+    width: 100%;
+    position: relative; /* Đảm bảo footer không bị che bởi nội dung */
+}
+
+/* ============================= */
+/* 📱 RESPONSIVE - MOBILE */
+/* ============================= */
+@media (max-width: 768px) {
+    .footer {
+        font-size: 16px;
+        padding: 15px 0;
+    }
+}

@@ -1,0 +1,32 @@
+.featured-rooms {
+    padding: 40px;
+    text-align: center;
+}
+
+.room-list {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.room-card {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    max-width: 250px;
+}
+
+.room-card img {
+    width: 100%;
+    border-radius: 10px;
+}
+
+.room-card button {
+    background: #0091EA;
+    color: white;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}

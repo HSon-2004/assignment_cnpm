@@ -1,0 +1,101 @@
+/* Định dạng toàn bộ header */
+.App-header {
+    background-color: #0091EA; /* Màu xanh nước biển */
+    color: white;
+    display: flex;
+    justify-content: space-between; /* Căn trái - phải */
+    align-items: center;
+    padding: 15px 40px;
+    height: 70px;
+    font-family: Arial, sans-serif;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+    position: sticky;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+}
+
+/* Căn chỉnh logo về bên trái */
+.header-left {
+    display: flex;
+    align-items: center;
+}
+
+.logo {
+    height: 100px; /* Điều chỉnh kích thước logo */
+    width: auto; /* Tự động co giãn theo tỷ lệ */
+}
+
+/* Menu điều hướng bên phải */
+.header-right {
+
+    padding-right: 20px;
+    display: flex;
+    align-items: center;
+}
+
+/* Định dạng danh sách menu */
+.header-right ul {
+    list-style: none;
+
+    display: flex;
+    gap: 20px; /* Khoảng cách giữa các mục menu */
+    margin: 0;
+    padding: 80px;
+}
+
+/* Định dạng các mục menu */
+.header-right ul li {
+    display: inline;
+}
+
+/* Định dạng liên kết trong menu */
+.header-right ul li a {
+    text-decoration: none;
+    color: white; /* Màu chữ */
+    font-size: 16px;
+    font-weight: bold;
+    padding: 4px 10px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Hiệu ứng hover */
+.header-right ul li a:hover {
+    background-color: white;
+    color: #0091EA; /* Màu xanh nước biển khi hover */
+}
+
+/* Responsive cho màn hình nhỏ hơn */
+@media screen and (max-width: 768px) {
+    .App-header {
+        flex-direction: column;
+        height: auto;
+        padding: 10px 20px;
+        text-align: center;
+    }
+
+    .header-left {
+        margin-bottom: 10px;
+    }
+
+    .logo {
+        height: 50px;
+    }
+
+    .header-right ul {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .header-right ul li {
+        width: 100%;
+    }
+
+    .header-right ul li a {
+        display: block;
+        width: 100%;
+        text-align: center;
+        padding: 10px;
+    }
+}

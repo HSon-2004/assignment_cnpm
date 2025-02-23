@@ -1,0 +1,154 @@
+/* ============================= */
+/* 🌟 THIẾT KẾ DASHBOARD CHUYÊN NGHIỆP */
+/* ============================= */
+
+.dashboard {
+    padding: 20px;
+    background: linear-gradient(135deg, #f3f4f6, #e5e7eb); /* Gradient nền */
+    min-height: 100vh;
+}
+
+.dashboard-title {
+    text-align: center;
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: #333;
+    text-transform: uppercase;
+    margin-bottom: 30px;
+    letter-spacing: 2px;
+}
+
+/* ============================= */
+/* 📌 CONTAINER CHỨA CÁC DANH MỤC PHÒNG */
+/* ============================= */
+.dashboard-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); /* Responsive Grid */
+    gap: 25px;
+    padding: 10px;
+}
+
+/* ============================= */
+/* 🔹 DANH MỤC PHÒNG (CARD) */
+/* ============================= */
+.category-section {
+    background: #ffffff;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+/* Hiệu ứng hover: nổi lên và thay đổi ánh sáng */
+.category-section:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+/* Hiệu ứng viền phát sáng khi hover */
+.category-section::before {
+    content: "";
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: radial-gradient(circle, rgba(0, 150, 255, 0.15), transparent);
+    transition: opacity 0.3s ease;
+    opacity: 0;
+}
+
+.category-section:hover::before {
+    opacity: 1;
+}
+
+/* ============================= */
+/* 🏷️ TIÊU ĐỀ LOẠI PHÒNG */
+/* ============================= */
+.category-title {
+    font-size: 1.8rem;
+    font-weight: bold;
+    margin-bottom: 15px;
+    text-align: center;
+    padding: 10px;
+    color: #ffffff;
+    background: linear-gradient(135deg, #007bff, #0056b3);
+    border-radius: 8px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    box-shadow: inset 0 2px 5px rgba(255, 255, 255, 0.2);
+}
+
+/* ============================= */
+/* 📦 GRID CHỨA DANH SÁCH PHÒNG */
+/* ============================= */
+.room-list {
+    padding: 10px;
+}
+
+/* Danh sách phòng theo dạng Grid đẹp hơn */
+.room-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 15px;
+}
+
+/* ============================= */
+/* 📌 THIẾT KẾ CARD PHÒNG */
+/* ============================= */
+.room-card {
+    background: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border-left: 5px solid #007bff;
+    position: relative;
+}
+
+/* Hover: Hiệu ứng nhấn nổi */
+.room-card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* Hiệu ứng viền động */
+.room-card::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 5px;
+    background: linear-gradient(90deg, #007bff, #ff6b6b);
+    border-radius: 5px 5px 0 0;
+}
+
+/* ============================= */
+/* 🎭 LOẠI PHÒNG */
+/* ============================= */
+.room-type {
+    display: inline-block;
+    margin-top: 10px;
+    padding: 5px 12px;
+    font-size: 0.9rem;
+    font-weight: bold;
+    color: white;
+    border-radius: 5px;
+}
+
+/* Màu sắc cho từng loại phòng */
+.room-type.phong-thuong {
+    background: #6c757d;
+}
+
+.room-type.phong-may-chieu {
+    background: #007bff;
+}
+
+.room-type.phong-may-chieu-loa {
+    background: #ff6b6b;
+}
