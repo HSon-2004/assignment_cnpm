@@ -30,6 +30,7 @@ python-backend-mongodb
 └── README.md
 ```
 
+**Note:** Please refer to the [docs](docs) folder for more details on the API endpoints and database schema.
 
 ## Setup and Run
 
