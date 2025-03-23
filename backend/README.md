@@ -30,44 +30,14 @@ python-backend-mongodb
 └── README.md
 ```
 
-## Setup Instructions
 
-1. **Clone the repository:**
-   ```bash
-   git clone <repository-url>
-   cd python-backend-mongodb
-   ```
+## Setup and Run
 
-2. **Create a virtual environment:**
-   ```bash
-   python -m venv venv
-   source venv/bin/activate  # On Windows use `venv\Scripts\activate`
-   ```
-
-3. **Install dependencies:**
-   ```bash
-   pip install -r requirements.txt
-   ```
-
-4. **Set up environment variables:**
-   Create a `.env` file in the root directory and add your configuration settings, such as database connection strings.
-
-5. **Run the application:**
-   ```bash
-   python app/main.py
-   ```
-
-## Usage
-
-The application provides the following user-related endpoints:
-
-- **Create User:** `POST /users`
-- **Get User:** `GET /users/<id>`
-- **Update User:** `PUT /users/<id>`
-- **Delete User:** `DELETE /users/<id>`
-
-Refer to the code in `app/routes/user_routes.py` for more details on the endpoints and their implementations.
-
+1. Install python
+2. Install pipenv `pip install pipenv`
+3. Install shell `pipenv shell`
+4. Install dependencies `pipenv install -r requirements.txt`
+3. Run the application `python app/main.py`
 
 ## License
 
