@@ -1,11 +1,11 @@
 # API Endpoints
 
-## 1.Authentication
+## 1. Authentication
 POST /auth/login : Log in a user
 
 POST /auth/logout : Log out a user (optional, as JWT is stateless)
 
-## 2.Room Management
+## 2. Room Management
 
 GET /rooms : Retrieve all rooms
 
@@ -17,7 +17,7 @@ PUT /rooms/<room_id> : Update an existing room (admin only)
 
 DELETE /rooms/<room_id> : Delete a room (admin only)
 
-## 3.Booking Management
+## 3. Booking Management
 
 GET /bookings : Retrieve all bookings for the logged-in user
 
@@ -32,6 +32,12 @@ PUT /bookings/<booking_id> : Update an existing booking
 DELETE /bookings/<booking_id> : Cancel a booking
 
 POST /bookings/<booking_id>/checkin : Check in to a room
+
+## 4. IoT management
+
+GET /rooms/<room_id>/devices : Retrieve all devices
+
+PUST /rooms/<room_id>/devices/<devices_id> : Update device status
 
 # Database Schema
 
@@ -51,9 +57,15 @@ POST /bookings/<booking_id>/checkin : Check in to a room
     "id": "string",
     "name": "string",
     "capacity": "integer",
-    "devices" : ["string"],
+    "devices" : [
+        {
+            "device_id": "string",
+            "device_name": "string",
+            "status": "string" //[on, off]
+        }
+    ],
     "status": "string", //[available, booked, unavailable]
-    "datetime": 
+    "slots": 
         [
             {
                 "date": "datetime",
@@ -74,7 +86,7 @@ POST /bookings/<booking_id>/checkin : Check in to a room
 ## 3. Booking
 ```json
 {
-    "id": "string",
+    "book_id": "string",
     "user_id": "string",
     "room_id": "string",
     "checkin": "datetime",
