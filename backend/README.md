@@ -68,6 +68,6 @@ To run the application, follow the steps below:
 2. Install pipenv `pip install pipenv`
 3. Install shell `pipenv shell`
 4. Install dependencies `pipenv install -r requirements.txt`
-3. Run the application `python app/main.py`
+3. Run the application `python main.py`
 
-If not use pipenv, you can also install the dependencies using `pip install -r requirements.txt` and run the application using `python app/main.py`.
+If not use pipenv, you can also install the dependencies using `pip install -r requirements.txt` and run the application using `python main.py`.
