@@ -1,5 +1,3 @@
-# File: /python-backend-mongodb/python-backend-mongodb/app/config/settings.py
-
 import os
 from dotenv import load_dotenv
 

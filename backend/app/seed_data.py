@@ -1,21 +1,15 @@
-from models import User, Room, Booking
-from database import init_db
+from app.models import User, Room, Booking
+from app.database import init_db
 from datetime import datetime, timezone
 
-init_db()
-
-User.drop_collection()
-Room.drop_collection()
-Booking.drop_collection()
 
 admin = User(
-    user_id="11",
+    user_id="20",
     username="admin",
     email="admin@example.com",
     password="admin",
     role="admin"
 )
-admin.save()
 
 student = User(
     user_id="2",
@@ -24,7 +18,6 @@ student = User(
     password="student",
     role="student"
 )
-student.save()
 
 teacher = User(
     user_id="3",
@@ -33,9 +26,7 @@ teacher = User(
     password="teacher",
     role="teacher"
 )
-teacher.save()
 
-print("Users added successfully!")
 
 room1 = Room(
     room_id="1",
@@ -65,7 +56,6 @@ room1 = Room(
         )
     ]
 )
-room1.save()
 
 room2 = Room(
     room_id="2",
@@ -96,9 +86,7 @@ room2 = Room(
     ]
 
 )
-room2.save()
 
-print("Rooms added successfully!")
 
 booking1 = Booking(
     book_id="1",
@@ -111,6 +99,17 @@ booking1 = Booking(
     created_at=datetime.now(timezone.utc),  
     updated_at=datetime.now(timezone.utc)  
 )
-booking1.save()
 
-print("Booking added successfully!")
+def seed_data():
+    init_db()
+
+    User.drop_collection()
+    Room.drop_collection()
+    Booking.drop_collection()
+
+    admin.save()
+    student.save()
+    teacher.save()
+    room1.save()
+    room2.save()
+    booking1.save()
